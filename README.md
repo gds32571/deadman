@@ -19,11 +19,9 @@ The deadman program runs on a client computer to:
 
    The main program.  It has two functions:
 
-      1. It toggles a GPIO signal connected to the UPS that supports it. This
-lets the UPS know that the computer is still running.
-      2. It makes a connection to the watchdog instance running on the
-watchdog server computer. That program sends an MQTT message to the Home
-Assistant so it can show the client computer is still running. 
+      1. It toggles a GPIO signal connected to the UPS that supports it. This lets the UPS know that the computer is still running.
+      2. It makes a connection to the watchdog instance running on the watchdog server computer. That program sends an MQTT message 
+      to the Home Assistant so it can show the client computer is still running. 
 
 ### getwd.py
 
