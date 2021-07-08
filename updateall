@@ -38,6 +38,8 @@ scp ./deadmanrestart pi@rp7:/home/pi/deadman/deadmanrestart
 scp ./deadmanrestart pi@rp8:/home/pi/deadman/deadmanrestart
 
 
+# since deadman.py is run from dm.sh, we can restart the program
+# adter updating it.
 # on rp5
 echo "Restarting deadman on rp5"
 ./deadmanrestart
