@@ -1,4 +1,4 @@
-## deadman.py 
+## deadman 
 
 On the client:
 
