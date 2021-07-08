@@ -2,7 +2,9 @@
 
 On the client:
 
-   At startup, the deadman program sends a UDP broadcast lookng for the watchdog server.  The response is a UDP packet with the host name directed to the querying computer.  The deadman client then queries that host for the port number the deadman should use.
+   At startup, the deadman program sends a UDP broadcast looking for the watchdog server.
+The response is a UDP packet with the host name directed to the querying computer.  The 
+deadman client then queries that host for the port number the deadman should use.
 
 The deadman program runs on a client computer to:
    1. Signals the attending Uninterruptible Power Supply (UPS) that it is up and going, avoiding an UPS controlled reboot.
@@ -15,15 +17,21 @@ The deadman program runs on a client computer to:
 
 ### deadman.py
 
-   The main program.
+   The main program.  It has two functions:
+
+      1. It toggles a GPIO signal connected to the UPS that supports it. This
+lets the UPS know that the computer is still running.
+      2. It makes a connection to the watchdog instance running on the
+watchdog server computer. That program sends an MQTT message to the Home
+Assistant so it can show the client computer is still running. 
 
 ### getwd.py
 
-   This script uses a UDP broadcast to identify the host computer running the watchdog.
+   This program uses a UDP broadcast to identify the host computer running the watchdog.
 
 ### getport.py
 
-   This script uses a UDP packet to find the port it is supposed to use.  This port number is mapped by the watchdog to a MQTT message that identifies the client host or application. 
+   This program uses a UDP packet to find the port it is supposed to use.  This port number is mapped by the watchdog to a MQTT message that identifies the client host or application. 
 
 ### updateall
 
