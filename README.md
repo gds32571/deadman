@@ -34,7 +34,7 @@ The deadman program runs on a client computer to:
 ### updateall
 
    The RPi computer rp5 holds the master copy of these programs.  After making a change to one of them, this script is used to copy the deadman files to all of the
-client computers.  It also restarts the deadman program so that it runs the latest copy. 
+client computers.  It also restarts the deadman program on each client computer so that it runs the latest copy. 
 
 ### deadmanrestart
 
