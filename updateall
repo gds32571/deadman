@@ -1,0 +1,50 @@
+#!/bin/bash
+
+# updating all client computers for the deadman
+
+
+# temporarily commented out
+#scp ./dm.sh pi@rp2:/home/pi/deadman/dm.sh
+#scp ./dm.sh pi@rp6:/home/pi/deadman/dm.sh
+#scp ./dm.sh pi@rp7:/home/pi/deadman/dm.sh
+#scp ./dm.sh pi@rp8:/home/pi/deadman/dm.sh
+
+
+#scp ./deadman.py pi@rp1:/home/pi/deadman/deadman.py
+scp ./deadman.py pi@rp2:/home/pi/deadman/deadman.py
+#scp ./deadman.py pi@rp5:/home/pi/deadman/deadman.py
+scp ./deadman.py pi@rp6:/home/pi/deadman/deadman.py
+scp ./deadman.py pi@rp7:/home/pi/deadman/deadman.py
+scp ./deadman.py pi@rp8:/home/pi/deadman/deadman.py
+
+#scp ./getport.py pi@rp1:/home/pi/deadman/getport.py
+scp ./getport.py pi@rp2:/home/pi/deadman/getport.py
+#scp ./getport.py pi@rp5:/home/pi/deadman/getport.py
+scp ./getport.py pi@rp6:/home/pi/deadman/getport.py
+scp ./getport.py pi@rp7:/home/pi/deadman/getport.py
+scp ./getport.py pi@rp8:/home/pi/deadman/getport.py
+
+#scp ./getwd.py pi@rp1:/home/pi/deadman/getwd.py
+scp ./getwd.py pi@rp2:/home/pi/deadman/getwd.py
+#scp ./getwd.py pi@rp5:/home/pi/deadman/getwd.py
+scp ./getwd.py pi@rp6:/home/pi/deadman/getwd.py
+scp ./getwd.py pi@rp7:/home/pi/deadman/getwd.py
+scp ./getwd.py pi@rp8:/home/pi/deadman/getwd.py
+
+
+scp ./deadmanrestart pi@rp2:/home/pi/deadman/deadmanrestart
+scp ./deadmanrestart pi@rp6:/home/pi/deadman/deadmanrestart
+scp ./deadmanrestart pi@rp7:/home/pi/deadman/deadmanrestart
+scp ./deadmanrestart pi@rp8:/home/pi/deadman/deadmanrestart
+
+
+# on rp5
+echo "Restarting deadman on rp5"
+./deadmanrestart
+
+# on other rp computers
+ssh pi@rp2 /home/pi/deadman/deadmanrestart
+ssh pi@rp6 /home/pi/deadman/deadmanrestart
+ssh pi@rp7 /home/pi/deadman/deadmanrestart
+ssh pi@rp8 /home/pi/deadman/deadmanrestart
+

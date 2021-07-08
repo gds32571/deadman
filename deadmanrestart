@@ -1,0 +1,7 @@
+#!/bin/bash
+
+sleep 3
+kill $(pgrep -f 'python deadman.py')
+sleep 3
+
+

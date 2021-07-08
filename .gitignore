@@ -1,0 +1,9 @@
+__pycache__/*
+save/*
+testing/*
+readme
+*~
+*.pyc
+sd.log
+myctr.txt
+myerr.txt
